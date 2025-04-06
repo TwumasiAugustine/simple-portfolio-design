@@ -4,44 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional portfolio of [Your Name], a graphic designer specializing in [specialties]">
-    <title>Isco - Graphic Designer</title>
+    <title>Isco Graphics</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-white text-gray-900">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white z-50 shadow-lg">
+    <nav class="sticky w-full bg-white z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <a href="/" class="text-xl font-bold text-indigo-600">Isco</a>
-                <div class="flex space-x-4">
+                <a href="/" class="text-2xl font-bold text-indigo-600">Isco Graphics</a>
+                <div class="hidden md:flex space-x-4">
                     <a href="#work" class="text-gray-600 hover:text-indigo-600">Work</a>
                     <a href="#about" class="text-gray-600 hover:text-indigo-600">About</a>
                     <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
                 </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <span class="sr-only">mobile-menu</span>
+                    </button>
+                </div>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden">
+                    <a href="#work" class="block text-gray-600 hover:text-indigo-600 py-2">Work</a>
+                    <a href="#about" class="block text-gray-600 hover:text-indigo-600 py-2">About</a>
+                    <a href="#contact" class="block text-gray-600 hover:text-indigo-600 py-2">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="min-h-screen flex items-center bg-gradient-to-b from-indigo-50 to-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4 text-indigo-900">Crafting Visual Stories</h1>
-            <p class="text-xl md:text-2xl text-gray-600 mb-8">I'm Isco, a graphic designer passionate about creating impactful designs that tell stories.</p>
-            <a href="#work" class="inline-block px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">View My Work</a>
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12 fade-in">
+            <div class="text-center md:text-left md:w-1/2">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 text-indigo-900">Visualizing Your Vision</h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8">I'm Godfred Akoto, a graphic designer passionate about
+                    creating impactful designs that tell stories.</p>
+                <a href="#work"
+                    class="inline-block px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">View
+                    My Work</a>
+            </div>
+            <div class="relative md:w-1/2 flex justify-center items-center">
+                <img src="./assets/profile.jpg" alt="Godfred Akoto" class="rounded-full shadow-lg w-64 h-64 object-cover">
+                <div class="absolute bottom-0 right-0 flex space-x-2">
+                    <a href="https://www.tiktok.com/@iscodesign3" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/tik-tok.png" alt="TikTok" class="w-8 h-8">
+                        <span class="sr-only">TikTok</span>
+                    </a>
+                    <a href="https://x.com/Isco11341271" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/twitter.png" alt="X" class="w-8 h-8">
+                        <span class="sr-only">X</span>
+                    </a>
+                    <a href="https://www.facebook.com/godfred.akoto.52" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/facebook.png" alt="Facebook" class="w-8 h-8">
+                        <span class="sr-only">Facebook</span></span>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Work Section -->
-    <section id="work" class="py-20">
+    <section id="work" class="py-20 bg-white slide-in-left">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-indigo-900 animate-on-scroll">Featured Projects</h2>
+            <h2 class="text-4xl font-bold text-center mb-12 text-indigo-900">Featured Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow animate-on-scroll">
                     <img loading="lazy" src="https://img.freepik.com/free-psd/company-profile-cover-design-template_237398-416.jpg?uid=R62875424&ga=GA1.1.1874976564.1733752234&semt=ais_hybrid" alt="Branding Project" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-indigo-900">Branding Redesign</h3>
+                        <h3 class="text-xl font-bold mb-2 text-indigo-900">Branding Design</h3>
                         <p class="text-gray-600 mb-4">Complete rebranding for a tech startup, including logo, typography, and visual identity.</p>
                         <a href="#" class="text-indigo-600 hover:text-indigo-700">View Case Study →</a>
                     </div>
@@ -81,33 +117,50 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-indigo-50">
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-indigo-50 slide-in-right">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-indigo-900 animate-on-scroll">My Skills</h2>
+        <h2 class="text-4xl font-bold text-center mb-12 text-indigo-900">My Services</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow animate-on-scroll">
                     <img loading="lazy" src="https://img.freepik.com/free-psd/company-profile-cover-design-template_237398-416.jpg?uid=R62875424&ga=GA1.1.1874976564.1733752234&semt=ais_hybrid" alt="Branding" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-xl font-bold mb-2 text-indigo-900">Visual Identity</h3>
-                    <p class="text-gray-600">Creating unique visual identities that resonate with target audiences.</p>
+                    <h3 class="text-xl font-bold mb-2 text-indigo-900">Flyer Design</h3>
+                    <p class="text-gray-600">Creating unique
+                        and eye-catching flyers that effectively communicate your message.</p>
+                    </p>
                 </div>
                 <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow animate-on-scroll">
                     <img loading="lazy" src="https://img.freepik.com/free-psd/company-profile-cover-design-template_237398-416.jpg?uid=R62875424&ga=GA1.1.1874976564.1733752234&semt=ais_hybrid"
                         alt="Typography" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-xl font-bold mb-2 text-indigo-900">Typography</h3>
-                    <p class="text-gray-600">Expertise in selecting and pairing typefaces for maximum impact.</p>
+                    <h3 class="text-xl font-bold mb-2 text-indigo-900">Banner Design</h3>
+                    <p class="text-gray-600">
+                        Crafting visually appealing banners for both digital and print media.
+                    </p>
                 </div>
                 <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow animate-on-scroll">
                     <img loading="lazy" src="https://img.freepik.com/free-psd/company-profile-cover-design-template_237398-416.jpg?uid=R62875424&ga=GA1.1.1874976564.1733752234&semt=ais_hybrid"
                         alt="Print Design" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-xl font-bold mb-2 text-indigo-900">Print Design</h3>
-                    <p class="text-gray-600">Designing for physical media with attention to detail and production requirements.</p>
+                    <h3 class="text-xl font-bold mb-2 text-indigo-900">Logo Design</h3>
+                    <p class="text-gray-600">
+                        Designing logos that are not only visually appealing but also communicate the brand's message effectively.
+                    </p>
                 </div>
                 <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow animate-on-scroll">
                     <img loading="lazy" src="https://img.freepik.com/free-psd/company-profile-cover-design-template_237398-416.jpg?uid=R62875424&ga=GA1.1.1874976564.1733752234&semt=ais_hybrid"
                         alt="Digital Design" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-xl font-bold mb-2 text-indigo-900">Digital Design</h3>
-                    <p class="text-gray-600">Creating engaging designs optimized for web and mobile platforms.</p>
+                    <h3 class="text-xl font-bold mb-2 text-indigo-900">Business & Invitation Card</h3>
+                    <p class="text-gray-600">
+                        Creating visually appealing and effective business and invitation cards that leave a lasting impression.
+                    </p>
+                    </div>
+                    <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow animate-on-scroll">
+                        <img loading="lazy"
+                            src="https://img.freepik.com/free-psd/company-profile-cover-design-template_237398-416.jpg?uid=R62875424&ga=GA1.1.1874976564.1733752234&semt=ais_hybrid"
+                            alt="Digital Design" class="w-16 h-16 mx-auto mb-4">
+                        <h3 class="text-xl font-bold mb-2 text-indigo-900">Wedding Card</h3>
+                        <p class="text-gray-600">
+                            Designing beautiful and elegant wedding cards that reflect the couple's style and theme.
+                        </p>
                 </div>
             </div>
         </div>
@@ -117,7 +170,7 @@
     <section id="tools" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center mb-12 text-indigo-900 animate-on-scroll">My Toolkit</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 place-content-center">
                 <!-- CorelDRAW -->
                 <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow animate-on-scroll">
                     <img loading="lazy" src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/012014/coreldrawx6.jpg?itok=kxNfHrjR" alt="CorelDRAW" class="w-16 h-16 mx-auto mb-4">
@@ -148,29 +201,38 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-indigo-50">
+    <section id="about" class="py-20 bg-white fade-in">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-on-scroll">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold mb-6 text-indigo-900">About Me</h2>
-                    <p class="text-gray-600 mb-4">With over 5 years of experience in graphic design, I specialize in creating visually compelling designs that communicate brand stories effectively.</p>
-                    <p class="text-gray-600">My expertise spans across branding, digital design, and print media, with a focus on creating designs that are both beautiful and functional.</p>
+                    <h2 class="text-4xl font-bold mb-6 text-indigo-900">About Me</h2>
+                    <p class="text-gray-600 mb-4">Hi, I'm Godfred, a passionate and creative graphic designer behind <strong>ISCO
+                            Graphics</strong> — your one-stop shop for all things design.</p>
+                    <p class="text-gray-600 mb-4">I specialize in transforming ideas into visual realities that speak
+                        volumes. Whether you're looking for eye-catching <strong>flyers</strong>, stunning <strong>logos</strong>, impactful
+                        <strong>banners</strong>, or
+                        custom <strong>T-shirt designs</strong>, I’m here to bring your vision to life.
+                    </p>
+                    <p class="text-gray-600">Let’s work together to visualize your vision.</p>
                 </div>
-                <img loading="lazy" src="https://img.freepik.com/free-photo/portrait-handsome-young-man-with-arms-crossed-holding-white-headphone-around-his-neck_23-2148096439.jpg?uid=R62875424&ga=GA1.1.1874976564.1733752234&semt=ais_hybrid" alt="isco" class="rounded-lg shadow-lg w-[4rem] h-[4rem] object-contain aspect-square">
+                <img src="./assets/profile.jpg" alt="Godfred Akoto" class="rounded-lg shadow-lg">
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20">
+    <section id="contact" class="py-20 bg-indigo-50 slide-in-left">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-indigo-900 animate-on-scroll">Let's Work Together</h2>
+            <h2 class="text-4xl font-bold text-center mb-12 text-indigo-900">Let's Work Together</h2>
             <form class="max-w-2xl mx-auto">
                 <div class="grid grid-cols-1 gap-6">
-                    <input type="text" placeholder="Your Name" class="p-3 rounded-lg bg-white border border-gray-200">
-                    <input type="email" placeholder="Your Email" class="p-3 rounded-lg bg-white border border-gray-200">
+                    <input type="text" placeholder="Your Name" class="p-3 rounded-lg bg-white border border-gray-200"
+                        aria-label="Your Name">
+                    <input type="email" placeholder="Your Email" class="p-3 rounded-lg bg-white border border-gray-200"
+                        aria-label="Your email">
                     <textarea placeholder="Your Message" class="p-3 rounded-lg bg-white border border-gray-200" rows="5"></textarea>
-                    <button type="submit" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">Send Message</button>
+                    <button type="submit" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">Send
+                        Message</button>
                 </div>
             </form>
         </div>
@@ -180,16 +242,23 @@
     <footer class="py-8 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-600">© 2025 Isco. All rights reserved.</p>
-                <div class="flex space-x-4 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-600 hover:text-indigo-600">LinkedIn</a>
-                    <a href="#" class="text-gray-600 hover:text-indigo-600">Instagram</a>
-                    <a href="#" class="text-gray-600 hover:text-indigo-600">Facebook</a>
+                <p class="text-gray-600">© <span id="year"> </span> Isco Graphics. All rights reserved.</p>
+                <div class="flex space-x-4 mt-2 md:mt-0">
+                    <a href="https://www.tiktok.com/@iscodesign3" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-600 hover:text-indigo-600">TikTok</a>
+                    <a href="https://x.com/Isco11341271" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-600 hover:text-indigo-600">X</a>
+                    <a href="https:www.facebook.com/godfred.akoto.52" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-600 hover:text-indigo-600">Facebook</a>
+                    <a href="mailto:ogodfred1001@gmail.com" target="_blank" rel="noopener noreferrer" 
+                        class="text-gray-600 hover:text-indigo-600">Email</a>
                 </div>
+                <p class="text-gray-600 mt-2">
+                    Made with <span class="text-red-500 animate-pulse">❤️</span> by <a href="#" class="font-semibold hover:underline">CodeSphere Technologies</a>
+                </p>
             </div>
         </div>
     </footer>
-
-    <script src="scripts.js"></script>
+    <script defer src="scripts.js"></script>
 </body>
 </html> 
