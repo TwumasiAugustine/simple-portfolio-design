@@ -1,5 +1,7 @@
 body{
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 @keyframes fadeIn {
@@ -40,23 +42,3 @@ img {
     height: auto;
 }
 
-.debug-dark-mode {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.dark .debug-dark-mode {
-    background-color: #1a202c;
-    color: #ffffff;
-}
-
-/* Add this to verify dark mode is working */
-body:not(.dark) {
-    background-color: white !important;
-    color: black !important;
-}
-
-body.dark {
-    background-color: #1a202c !important;
-    color: white !important;
-} 
