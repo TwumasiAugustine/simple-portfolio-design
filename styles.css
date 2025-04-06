@@ -1,0 +1,62 @@
+body{
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Additional animations */
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Add this to make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.debug-dark-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark .debug-dark-mode {
+    background-color: #1a202c;
+    color: #ffffff;
+}
+
+/* Add this to verify dark mode is working */
+body:not(.dark) {
+    background-color: white !important;
+    color: black !important;
+}
+
+body.dark {
+    background-color: #1a202c !important;
+    color: white !important;
+} 
