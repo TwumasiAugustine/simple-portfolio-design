@@ -42,3 +42,20 @@ img {
     height: auto;
 }
 
+  /* Ensure smooth transitions for modal */
+    #imageModal {
+        transition: opacity 0.3s ease;
+    }
+    
+    /* Perfect centering for all image sizes */
+    #modalImage {
+        margin: auto;
+        display: block;
+
+    }
+    
+    #imageModal div {
+        contain: content;
+    }
+    
+     
